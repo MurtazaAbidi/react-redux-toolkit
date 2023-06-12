@@ -6,7 +6,7 @@
 // const userReducer = require('../features/user/userSlice')
 
 import { configureStore } from '@reduxjs/toolkit'
-import cakeReducer from '../features/icecream/icecreamSlice'
+import cakeReducer from '../features/cake/cakeSlice'
 import icecreamReducer from '../features/icecream/icecreamSlice'
 import userReducer from '../features/user/userSlice'
 

@@ -2,7 +2,8 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { ordered, restocked } from './icecreamSlice'
 const IcecreamView = () => {
-  const noOfIcecreams = useSelector((state) => state.icecream.noOfIcecreams)
+  const noOfIcecreams = useSelector((state) => state.icecream.numOfIcecreams)
+  // console.log ('IceCreams: ', useSelector((state) => state.icecream.numOfIcecreams))
   const dispatch = useDispatch()
   return (
     <div>

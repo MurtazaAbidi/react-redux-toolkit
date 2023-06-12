@@ -1,7 +1,5 @@
-const { default: axios } = require('axios')
-
-const createSlice = require('@reduxjs/toolkit').createSlice
-const createAsyncThunk = require('@reduxjs/toolkit').createAsyncThunk
+import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
+import axios from 'axios'
 
 const initialState = {
     loading: false,
@@ -10,7 +8,7 @@ const initialState = {
 }
 
 // Generates pending, fulfilled and rejectedaction types
-const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
+export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
     return axios
         .get('https://jsonplaceholder.typicode.com/users')
         // .get('https://jsonplaceholder.typicode.com/usersasdf') // promise rejected due to 404 url not found
@@ -37,5 +35,4 @@ const userSlice = createSlice({
     }
 })
 
-module.exports = userSlice.reducer
-module.exports.fetchUsers = fetchUsers
+export default userSlice.reducer

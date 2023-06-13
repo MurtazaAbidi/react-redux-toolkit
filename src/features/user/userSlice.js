@@ -12,7 +12,7 @@ export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
     return axios
         .get('https://jsonplaceholder.typicode.com/users')
         // .get('https://jsonplaceholder.typicode.com/usersasdf') // promise rejected due to 404 url not found
-        .then((response) => response.data.map((user) => user.id))
+        .then((response) => response.data)
 })
 
 const userSlice = createSlice({
